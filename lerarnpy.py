@@ -373,3 +373,68 @@
 
 # dict1.values()  # Getting all values from the dictionary
 # print(dict1)
+
+
+#class
+
+# class Person:
+#     def __init__(self, name,age):
+#         self.name = name
+#         self.age = age
+
+#     def greet(self):
+#         print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+
+
+# p1 = Person("Mubarak", 25)
+
+# class Student(Person):
+#     def __init__(self,name,age, student_id):
+#         super().__init__(name, age)
+#         self.student_id = student_id
+
+#     def greet(self):
+#         super().greet()
+#         print(f"My student ID is {self.student_id}.")
+
+# s1 = Student("Ali", 20, "S12345")
+# s1.greet()
+
+# class Student:
+#     def __init__(self,name,standerd,roll_no):
+#         self.name = name
+#         self.standerd = standerd
+#         self.roll_no = roll_no
+
+#     def exam(self,physics,mathematics,chemistry,biology,english):
+#         self.physics = physics
+#         self.mathematics = mathematics
+#         self.chemistry = chemistry
+#         self.biology = biology
+#         self.english = english
+#         total = self.physics + self.mathematics + self.chemistry + self.biology + self.english
+#         return total / len([self.biology, self.english, self.chemistry, self.mathematics, self.physics])
+
+    
+#     def result(self):
+#         percentage = self.exam(self.physics, self.mathematics, self.chemistry, self.biology, self.english)
+#         if percentage >= 40:
+#             return f"{self.name} has passed the exam with {percentage:.2f}%."
+#         else:
+#             return f"{self.name} has failed the exam with {percentage:.2f}%."
+        
+#     @staticmethod # for withtout instantiation, means adding self as paramter. 
+#     def hello():
+#         return "Hello, I am a student."
+    
+#     def __cannot_call(self):
+#         return "This method cannot be called directly." 
+
+
+
+# s1 = Student("Mubarak", "10th", 12345)
+# s1.exam(95, 90, 98, 98, 92)
+# print(s1.result())
+# print(s1.hello())
+# print(s1._Student__cannot_call())  # Accessing the private method using name mangling
+# print(s1.__cannot_call()) # This will raise an AttributeError since __cannot_call is private and cannot be accessed directly.
